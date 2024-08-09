@@ -1,0 +1,888 @@
+ 1  ls
+    2  sudo apt-get update
+    3  sudo apt-get install -y ca-certificates curl gnupg
+    4  sudo mkdir -p /etc/apt/keyrings
+    5  curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+    6  NODE_MAJOR=22
+    7  echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+    8  sudo apt-get update
+    9  sudo apt-get install nodejs -y
+   10  npm install web3
+   11  npm install --save-dev @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chai
+   12  npm i @openzeppelin/contracts@4.5.0
+   13  npx create-react-app hello
+   14  history
+   15  cd hello
+   16  ls
+   17  npx hardhat init
+   18  history
+   19  ls
+   20  vi hardhat.config.js
+   21  cd contracts/
+   22  ls
+   23  rm Lock.sol
+   24  vi MyNFT.sol
+   25  ls
+   26  cd ..
+   27  mkdir scripts
+   28  vi deploy.js
+   29  ls
+   30  cd scripts
+   31  ls
+   32  vi deploy.js
+   33  cd ..
+   34  ls
+   35  npx   hardhat run scripts/deploy.js --network localhost
+   36  npx hardhat console --network localhost
+   37  history
+
+
+
+
+################################
+############################### node terminal  / server
+###############################
+
+ubuntu@ip-172-31-33-4:~/hello$  npx hardhat node --hostname  ec2-52-36-236-143.us-west-2.compute.amazonaws.com
+Started HTTP and WebSocket JSON-RPC server at http://172.31.33.4:8545/
+
+Accounts
+========
+
+WARNING: These accounts, and their private keys, are publicly known.
+Any funds sent to them on Mainnet or any other live network WILL BE LOST.
+
+Account #0: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 (10000 ETH)
+Private Key: 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+
+Account #1: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 (10000 ETH)
+Private Key: 0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
+
+Account #2: 0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC (10000 ETH)
+Private Key: 0x5de4111afa1a4b94908f83103eb1f1706367c2e68ca870fc3fb9a804cdab365a
+
+Account #3: 0x90F79bf6EB2c4f870365E785982E1f101E93b906 (10000 ETH)
+Private Key: 0x7c852118294e51e653712a81e05800f419141751be58f605c371e15141b007a6
+
+Account #4: 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65 (10000 ETH)
+Private Key: 0x47e179ec197488593b187f80a00eb0da91f1b9d0b13f8733639f19c30a34926a
+
+Account #5: 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc (10000 ETH)
+Private Key: 0x8b3a350cf5c34c9194ca85829a2df0ec3153be0318b5e2d3348e872092edffba
+
+Account #6: 0x976EA74026E726554dB657fA54763abd0C3a0aa9 (10000 ETH)
+Private Key: 0x92db14e403b83dfe3df233f83dfa3a0d7096f21ca9b0d6d6b8d88b2b4ec1564e
+
+Account #7: 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955 (10000 ETH)
+Private Key: 0x4bbbf85ce3377467afe5d46f804f221813b2bb87f24d81f60f1fcdbf7cbf4356
+
+Account #8: 0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f (10000 ETH)
+Private Key: 0xdbda1821b80551c9d65939329250298aa3472ba22feea921c0cf5d620ea67b97
+
+Account #9: 0xa0Ee7A142d267C1f36714E4a8F75612F20a79720 (10000 ETH)
+Private Key: 0x2a871d0798f97d79848a013d4936a73bf4cc922c825d33c1cf7073dff6d409c6
+
+Account #10: 0xBcd4042DE499D14e55001CcbB24a551F3b954096 (10000 ETH)
+Private Key: 0xf214f2b2cd398c806f84e317254e0f0b801d0643303237d97a22a48e01628897
+
+Account #11: 0x71bE63f3384f5fb98995898A86B02Fb2426c5788 (10000 ETH)
+Private Key: 0x701b615bbdfb9de65240bc28bd21bbc0d996645a3dd57e7b12bc2bdf6f192c82
+
+Account #12: 0xFABB0ac9d68B0B445fB7357272Ff202C5651694a (10000 ETH)
+Private Key: 0xa267530f49f8280200edf313ee7af6b827f2a8bce2897751d06a843f644967b1
+
+Account #13: 0x1CBd3b2770909D4e10f157cABC84C7264073C9Ec (10000 ETH)
+Private Key: 0x47c99abed3324a2707c28affff1267e45918ec8c3f20b8aa892e8b065d2942dd
+
+Account #14: 0xdF3e18d64BC6A983f673Ab319CCaE4f1a57C7097 (10000 ETH)
+Private Key: 0xc526ee95bf44d8fc405a158bb884d9d1238d99f0612e9f33d006bb0789009aaa
+
+Account #15: 0xcd3B766CCDd6AE721141F452C550Ca635964ce71 (10000 ETH)
+Private Key: 0x8166f546bab6da521a8369cab06c5d2b9e46670292d85c875ee9ec20e84ffb61
+
+Account #16: 0x2546BcD3c84621e976D8185a91A922aE77ECEc30 (10000 ETH)
+Private Key: 0xea6c44ac03bff858b476bba40716402b03e41b8e97e276d1baec7c37d42484a0
+
+Account #17: 0xbDA5747bFD65F08deb54cb465eB87D40e51B197E (10000 ETH)
+Private Key: 0x689af8efa8c651a91ad287602527f3af2fe9f6501a7ac4b061667b5a93e037fd
+
+Account #18: 0xdD2FD4581271e230360230F9337D5c0430Bf44C0 (10000 ETH)
+Private Key: 0xde9be858da4a475276426320d5e9262ecfc3ba460bfac56360bfa6c4c28b4ee0
+
+Account #19: 0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199 (10000 ETH)
+Private Key: 0xdf57089febbacf7ba0bc227dafbffa9fc08a93fdc68e1e42411a14efcf23656e
+
+WARNING: These accounts, and their private keys, are publicly known.
+Any funds sent to them on Mainnet or any other live network WILL BE LOST.
+
+eth_accounts
+hardhat_metadata (20)
+eth_blockNumber
+eth_getBlockByNumber
+eth_feeHistory
+eth_maxPriorityFeePerGas
+eth_sendTransaction
+  Contract deployment: <UnrecognizedContract>
+  Contract address:    0x5fbdb2315678afecb367f032d93f642f64180aa3
+  Transaction:         0xf2f86f3e9a331c742a51e2709cbb18586d64393e6c3d4ac5ef9d285c462aa366
+  From:                0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+  Value:               0 ETH
+  Gas used:            2608866 of 30000000
+  Block #1:            0xf5b4b3e6a5b210fb20e7617c0e21c780f4dbda91e986134fe136e4be0a240f20
+
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getBalance
+eth_accounts
+hardhat_metadata (20)
+eth_blockNumber
+eth_getBlockByNumber
+eth_feeHistory
+eth_sendTransaction
+  Contract deployment: <UnrecognizedContract>
+  Contract address:    0xe7f1725e7734ce288f8367e1bb143e90bb3f0512
+  Transaction:         0x3ea689c1a1780cf09a638af7fe22758dad9b1250bc9d9f19725c40c27fd93477
+  From:                0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+  Value:               0 ETH
+  Gas used:            2608866 of 30000000
+  Block #2:            0x913568b6b2d46a276325e2fe27ffcf276c7ed8b7ad9fa11f2d3fc99d8db9e6e3
+
+eth_getTransactionByHash
+eth_accounts
+hardhat_metadata (20)
+eth_getBalance (4)
+eth_blockNumber
+eth_feeHistory
+eth_sendTransaction
+  Contract call:       <UnrecognizedContract>
+  Transaction:         0x340383ebd1bd85b32334e4516f2d1331479b420144c783a9d7849eab9ef81d44
+  From:                0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+  To:                  0xe7f1725e7734ce288f8367e1bb143e90bb3f0512
+  Value:               0 ETH
+  Gas used:            115939 of 30000000
+  Block #3:            0x3224a2d711d2c7787925253651c42fcdc47d7c5d79bccc21d308c503f14c5677
+
+eth_getTransactionByHash
+eth_blockNumber
+eth_feeHistory
+eth_sendTransaction
+  Contract call:       <UnrecognizedContract>
+  Transaction:         0x36558b3a5d7a4546103ebd55102ab5fbcfac795087f539ce01b84d4b4ee3b54c
+  From:                0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+  To:                  0xe7f1725e7734ce288f8367e1bb143e90bb3f0512
+  Value:               0 ETH
+  Gas used:            81739 of 30000000
+  Block #4:            0xce17840ca578b63377e9076726ced42950d019b61aba12e87a8f9fe5a7b46900
+
+eth_getTransactionByHash
+eth_blockNumber
+eth_feeHistory
+eth_sendTransaction
+  Contract call:       <UnrecognizedContract>
+  Transaction:         0x9cbfe6024cb3b04e69d2d016a9f224d4137dbdacbbdf28665da47a34c78a13a9
+  From:                0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+  To:                  0xe7f1725e7734ce288f8367e1bb143e90bb3f0512
+  Value:               0 ETH
+  Gas used:            98851 of 30000000
+  Block #5:            0x09aec1b437c1cf2374518a615aac98ef2b0dd8d304de6b43a6a33cf874903ccf
+
+eth_getTransactionByHash
+eth_blockNumber
+eth_feeHistory
+eth_sendTransaction
+  Contract call:       <UnrecognizedContract>
+  Transaction:         0x24f975a2ea4ec47cb9d8a34783600cd41f277ae0ddd6e29405ed5b10affc0ea7
+  From:                0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+  To:                  0xe7f1725e7734ce288f8367e1bb143e90bb3f0512
+  Value:               0 ETH
+  Gas used:            81667 of 30000000
+  Block #6:            0x6bf25f069a7c11ead07dc006db8c3655263b65d12ac3728408552b57dff488e6
+
+eth_getTransactionByHash
+eth_blockNumber
+eth_feeHistory
+eth_sendTransaction
+  Contract call:       <UnrecognizedContract>
+  Transaction:         0xb446a968a5f9b9d39ddd14d29eef12a293024f3052878f8956bfde82a1e7e6b5
+  From:                0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+  To:                  0xe7f1725e7734ce288f8367e1bb143e90bb3f0512
+  Value:               0 ETH
+  Gas used:            81667 of 30000000
+  Block #7:            0x1c7bacb042c2339825e26d5397e318b8d99233e30bfbfc9da0e690b13277f300
+
+eth_getTransactionByHash
+eth_blockNumber
+eth_feeHistory
+eth_sendTransaction
+  Contract call:       <UnrecognizedContract>
+  Transaction:         0x01f1c9e6752b28c61f14973569c33ec87456e4ab8df703fe9952b39ac5dac616
+  From:                0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+  To:                  0xe7f1725e7734ce288f8367e1bb143e90bb3f0512
+  Value:               0 ETH
+  Gas used:            81667 of 30000000
+  Block #8:            0x7a00be9ec3420d4aac6e1eaa14158b36df6f5bd336fc17224f3a0f07db479332
+
+eth_getTransactionByHash
+eth_blockNumber
+eth_feeHistory
+eth_sendTransaction
+  Contract call:       <UnrecognizedContract>
+  Transaction:         0x416be5c61f1403ce23b779aa8a6469727e7781223c2c1f25561f6c5850751fd8
+  From:                0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+  To:                  0xe7f1725e7734ce288f8367e1bb143e90bb3f0512
+  Value:               0 ETH
+  Gas used:            81667 of 30000000
+  Block #9:            0xe8c7881f0b1af3d521c4494daf3090209d52192e45e471d4cea358f6e8783ba4
+
+eth_getTransactionByHash
+eth_blockNumber
+eth_feeHistory
+eth_sendTransaction
+  Contract call:       <UnrecognizedContract>
+  Transaction:         0x64283979338be7d26b11588ff6de0329c74b38475f6b68c3f78287c785aa228f
+  From:                0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+  To:                  0xe7f1725e7734ce288f8367e1bb143e90bb3f0512
+  Value:               0 ETH
+  Gas used:            81667 of 30000000
+  Block #10:           0x4901c6834921d07caaf2d1becd7279bdbc5a2e6f2a21ec5269d5d5cbc9a24e6a
+
+eth_getTransactionByHash
+eth_blockNumber
+eth_feeHistory
+eth_sendTransaction
+  Contract call:       <UnrecognizedContract>
+  Transaction:         0x8116a8032879aad5c65d2c2a26feebd03f03139788e06972ea51e784c237b92e
+  From:                0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+  To:                  0xe7f1725e7734ce288f8367e1bb143e90bb3f0512
+  Value:               0 ETH
+  Gas used:            81667 of 30000000
+  Block #11:           0xf3553add4a79dbc1104c0b71025d026c35546eede9b90315644042dd0c2dd713
+
+eth_getTransactionByHash
+eth_blockNumber
+eth_feeHistory
+eth_sendTransaction
+  Contract call:       <UnrecognizedContract>
+  Transaction:         0x0da3df487dfe323b81534f51bd76450d7864d47aeeffb5b0b3afba7127bc0d91
+  From:                0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+  To:                  0xe7f1725e7734ce288f8367e1bb143e90bb3f0512
+  Value:               0 ETH
+  Gas used:            81667 of 30000000
+  Block #12:           0x700fd5cde875120fe8ee35e73136a0304ef59daed74ddbc6fff8d687f74525ea
+
+eth_getTransactionByHash
+
+
+
+
+
+
+
+##########################################
+########################################## client
+##################################################
+
+
+
+ubuntu@ip-172-31-33-4:~/hello$
+npx hardhat console --network localhost
+Welcome to Node.js v22.6.0.
+Type ".help" for more information.
+>
+> >await ethers.provider.getBalance("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266")
+>await ethers.provider.getBalance("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266")
+^
+
+Uncaught SyntaxError: Unexpected token '>'
+> await ethers.provider.getBalance("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266")
+9999997110884722656250n
+> const contract =  await ethers.getContractFactory("MyNFT")
+undefined
+> const cd = await contract.deploy()
+undefined
+> const signers = await ethers.getSigners();
+undefined
+> signers
+[
+  HardhatEthersSigner {
+    _gasLimit: 30000000,
+    address: '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266',
+    provider: HardhatEthersProvider {
+      _hardhatProvider: [LazyInitializationProviderAdapter],
+      _networkName: 'localhost',
+      _blockListeners: [],
+      _transactionHashListeners: Map(0) {},
+      _eventListeners: []
+    }
+  },
+  HardhatEthersSigner {
+    _gasLimit: 30000000,
+    address: '0x70997970C51812dc3A010C7d01b50e0d17dc79C8',
+    provider: HardhatEthersProvider {
+      _hardhatProvider: [LazyInitializationProviderAdapter],
+      _networkName: 'localhost',
+      _blockListeners: [],
+      _transactionHashListeners: Map(0) {},
+      _eventListeners: []
+    }
+  },
+  HardhatEthersSigner {
+    _gasLimit: 30000000,
+    address: '0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC',
+    provider: HardhatEthersProvider {
+      _hardhatProvider: [LazyInitializationProviderAdapter],
+      _networkName: 'localhost',
+      _blockListeners: [],
+      _transactionHashListeners: Map(0) {},
+      _eventListeners: []
+    }
+  },
+  HardhatEthersSigner {
+    _gasLimit: 30000000,
+    address: '0x90F79bf6EB2c4f870365E785982E1f101E93b906',
+    provider: HardhatEthersProvider {
+      _hardhatProvider: [LazyInitializationProviderAdapter],
+      _networkName: 'localhost',
+      _blockListeners: [],
+      _transactionHashListeners: Map(0) {},
+      _eventListeners: []
+    }
+  },
+  HardhatEthersSigner {
+    _gasLimit: 30000000,
+    address: '0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65',
+    provider: HardhatEthersProvider {
+      _hardhatProvider: [LazyInitializationProviderAdapter],
+      _networkName: 'localhost',
+      _blockListeners: [],
+      _transactionHashListeners: Map(0) {},
+      _eventListeners: []
+    }
+  },
+  HardhatEthersSigner {
+    _gasLimit: 30000000,
+    address: '0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc',
+    provider: HardhatEthersProvider {
+      _hardhatProvider: [LazyInitializationProviderAdapter],
+      _networkName: 'localhost',
+      _blockListeners: [],
+      _transactionHashListeners: Map(0) {},
+      _eventListeners: []
+    }
+  },
+  HardhatEthersSigner {
+    _gasLimit: 30000000,
+    address: '0x976EA74026E726554dB657fA54763abd0C3a0aa9',
+    provider: HardhatEthersProvider {
+      _hardhatProvider: [LazyInitializationProviderAdapter],
+      _networkName: 'localhost',
+      _blockListeners: [],
+      _transactionHashListeners: Map(0) {},
+      _eventListeners: []
+    }
+  },
+  HardhatEthersSigner {
+    _gasLimit: 30000000,
+    address: '0x14dC79964da2C08b23698B3D3cc7Ca32193d9955',
+    provider: HardhatEthersProvider {
+      _hardhatProvider: [LazyInitializationProviderAdapter],
+      _networkName: 'localhost',
+      _blockListeners: [],
+      _transactionHashListeners: Map(0) {},
+      _eventListeners: []
+    }
+  },
+  HardhatEthersSigner {
+    _gasLimit: 30000000,
+    address: '0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f',
+    provider: HardhatEthersProvider {
+      _hardhatProvider: [LazyInitializationProviderAdapter],
+      _networkName: 'localhost',
+      _blockListeners: [],
+      _transactionHashListeners: Map(0) {},
+      _eventListeners: []
+    }
+  },
+  HardhatEthersSigner {
+    _gasLimit: 30000000,
+    address: '0xa0Ee7A142d267C1f36714E4a8F75612F20a79720',
+    provider: HardhatEthersProvider {
+      _hardhatProvider: [LazyInitializationProviderAdapter],
+      _networkName: 'localhost',
+      _blockListeners: [],
+      _transactionHashListeners: Map(0) {},
+      _eventListeners: []
+    }
+  },
+  HardhatEthersSigner {
+    _gasLimit: 30000000,
+    address: '0xBcd4042DE499D14e55001CcbB24a551F3b954096',
+    provider: HardhatEthersProvider {
+      _hardhatProvider: [LazyInitializationProviderAdapter],
+      _networkName: 'localhost',
+      _blockListeners: [],
+      _transactionHashListeners: Map(0) {},
+      _eventListeners: []
+    }
+  },
+  HardhatEthersSigner {
+    _gasLimit: 30000000,
+    address: '0x71bE63f3384f5fb98995898A86B02Fb2426c5788',
+    provider: HardhatEthersProvider {
+      _hardhatProvider: [LazyInitializationProviderAdapter],
+      _networkName: 'localhost',
+      _blockListeners: [],
+      _transactionHashListeners: Map(0) {},
+      _eventListeners: []
+    }
+  },
+  HardhatEthersSigner {
+    _gasLimit: 30000000,
+    address: '0xFABB0ac9d68B0B445fB7357272Ff202C5651694a',
+    provider: HardhatEthersProvider {
+      _hardhatProvider: [LazyInitializationProviderAdapter],
+      _networkName: 'localhost',
+      _blockListeners: [],
+      _transactionHashListeners: Map(0) {},
+      _eventListeners: []
+    }
+  },
+  HardhatEthersSigner {
+    _gasLimit: 30000000,
+    address: '0x1CBd3b2770909D4e10f157cABC84C7264073C9Ec',
+    provider: HardhatEthersProvider {
+      _hardhatProvider: [LazyInitializationProviderAdapter],
+      _networkName: 'localhost',
+      _blockListeners: [],
+      _transactionHashListeners: Map(0) {},
+      _eventListeners: []
+    }
+  },
+  HardhatEthersSigner {
+    _gasLimit: 30000000,
+    address: '0xdF3e18d64BC6A983f673Ab319CCaE4f1a57C7097',
+    provider: HardhatEthersProvider {
+      _hardhatProvider: [LazyInitializationProviderAdapter],
+      _networkName: 'localhost',
+      _blockListeners: [],
+      _transactionHashListeners: Map(0) {},
+      _eventListeners: []
+    }
+  },
+  HardhatEthersSigner {
+    _gasLimit: 30000000,
+    address: '0xcd3B766CCDd6AE721141F452C550Ca635964ce71',
+    provider: HardhatEthersProvider {
+      _hardhatProvider: [LazyInitializationProviderAdapter],
+      _networkName: 'localhost',
+      _blockListeners: [],
+      _transactionHashListeners: Map(0) {},
+      _eventListeners: []
+    }
+  },
+  HardhatEthersSigner {
+    _gasLimit: 30000000,
+    address: '0x2546BcD3c84621e976D8185a91A922aE77ECEc30',
+    provider: HardhatEthersProvider {
+      _hardhatProvider: [LazyInitializationProviderAdapter],
+      _networkName: 'localhost',
+      _blockListeners: [],
+      _transactionHashListeners: Map(0) {},
+      _eventListeners: []
+    }
+  },
+  HardhatEthersSigner {
+    _gasLimit: 30000000,
+    address: '0xbDA5747bFD65F08deb54cb465eB87D40e51B197E',
+    provider: HardhatEthersProvider {
+      _hardhatProvider: [LazyInitializationProviderAdapter],
+      _networkName: 'localhost',
+      _blockListeners: [],
+      _transactionHashListeners: Map(0) {},
+      _eventListeners: []
+    }
+  },
+  HardhatEthersSigner {
+    _gasLimit: 30000000,
+    address: '0xdD2FD4581271e230360230F9337D5c0430Bf44C0',
+    provider: HardhatEthersProvider {
+      _hardhatProvider: [LazyInitializationProviderAdapter],
+      _networkName: 'localhost',
+      _blockListeners: [],
+      _transactionHashListeners: Map(0) {},
+      _eventListeners: []
+    }
+  },
+  HardhatEthersSigner {
+    _gasLimit: 30000000,
+    address: '0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199',
+    provider: HardhatEthersProvider {
+      _hardhatProvider: [LazyInitializationProviderAdapter],
+      _networkName: 'localhost',
+      _blockListeners: [],
+      _transactionHashListeners: Map(0) {},
+      _eventListeners: []
+    }
+  }
+]
+> signers[1]
+HardhatEthersSigner {
+  _gasLimit: 30000000,
+  address: '0x70997970C51812dc3A010C7d01b50e0d17dc79C8',
+  provider: HardhatEthersProvider {
+    _hardhatProvider: LazyInitializationProviderAdapter {
+      _providerFactory: [AsyncFunction (anonymous)],
+      _emitter: [EventEmitter],
+      _initializingPromise: [Promise],
+      provider: [BackwardsCompatibilityProviderAdapter]
+    },
+    _networkName: 'localhost',
+    _blockListeners: [],
+    _transactionHashListeners: Map(0) {},
+    _eventListeners: []
+  }
+}
+> signers[0]
+HardhatEthersSigner {
+  _gasLimit: 30000000,
+  address: '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266',
+  provider: HardhatEthersProvider {
+    _hardhatProvider: LazyInitializationProviderAdapter {
+      _providerFactory: [AsyncFunction (anonymous)],
+      _emitter: [EventEmitter],
+      _initializingPromise: [Promise],
+      provider: [BackwardsCompatibilityProviderAdapter]
+    },
+    _networkName: 'localhost',
+    _blockListeners: [],
+    _transactionHashListeners: Map(0) {},
+    _eventListeners: []
+  }
+}
+> await ethers.provider.getBalance(signers[0])
+9999994520097897931918n
+> await ethers.provider.getBalance(signers[1])
+10000000000000000000000n
+> await ethers.provider.getBalance(signers[2])
+10000000000000000000000n
+> signers[2].address
+'0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC'
+> await ethers.provider.getBalance(signers[2])
+10000000000000000000000n
+> cd.mintNFT(signers[2], "http://WEFESFSFS")
+Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 4013,
+  [Symbol(trigger_async_id_symbol)]: 14
+}
+> await cd.mintNFT(signers[2], "http://WEFESFSFS")
+ContractTransactionResponse {
+  provider: HardhatEthersProvider {
+    _hardhatProvider: LazyInitializationProviderAdapter {
+      _providerFactory: [AsyncFunction (anonymous)],
+      _emitter: [EventEmitter],
+      _initializingPromise: [Promise],
+      provider: [BackwardsCompatibilityProviderAdapter]
+    },
+    _networkName: 'localhost',
+    _blockListeners: [],
+    _transactionHashListeners: Map(0) {},
+    _eventListeners: []
+  },
+  blockNumber: 4,
+  blockHash: '0xce17840ca578b63377e9076726ced42950d019b61aba12e87a8f9fe5a7b46900',
+  index: undefined,
+  hash: '0x36558b3a5d7a4546103ebd55102ab5fbcfac795087f539ce01b84d4b4ee3b54c',
+  type: 2,
+  to: '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512',
+  from: '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266',
+  nonce: 3,
+  gasLimit: 30000000n,
+  gasPrice: 780070840n,
+  maxPriorityFeePerGas: 186900566n,
+  maxFeePerGas: 780070840n,
+  maxFeePerBlobGas: null,
+  data: '0xeacabe140000000000000000000000003c44cdddb6a900fa2b585dd299e03d12fa4293bc00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000010687474703a2f2f57454645534653465300000000000000000000000000000000',
+  value: 0n,
+  chainId: 31337n,
+  signature: Signature { r: "0xb1d8deaecbe4ba0acd3916e57a2af997e85ee38e68eaa6fdf32e098c9010bc87", s: "0x61dfbaa55ec55c3eb5beb198bc7208eaa877eb49d3658c368277624c2385bb86", yParity: 1, networkV: null },
+  accessList: [],
+  blobVersionedHashes: null
+}
+> await cd.mintNFT(signers[3], "http://WEFESFSFS")
+ContractTransactionResponse {
+  provider: HardhatEthersProvider {
+    _hardhatProvider: LazyInitializationProviderAdapter {
+      _providerFactory: [AsyncFunction (anonymous)],
+      _emitter: [EventEmitter],
+      _initializingPromise: [Promise],
+      provider: [BackwardsCompatibilityProviderAdapter]
+    },
+    _networkName: 'localhost',
+    _blockListeners: [],
+    _transactionHashListeners: Map(0) {},
+    _eventListeners: []
+  },
+  blockNumber: 5,
+  blockHash: '0x09aec1b437c1cf2374518a615aac98ef2b0dd8d304de6b43a6a33cf874903ccf',
+  index: undefined,
+  hash: '0x9cbfe6024cb3b04e69d2d016a9f224d4137dbdacbbdf28665da47a34c78a13a9',
+  type: 2,
+  to: '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512',
+  from: '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266',
+  nonce: 4,
+  gasLimit: 30000000n,
+  gasPrice: 683093337n,
+  maxPriorityFeePerGas: 163718571n,
+  maxFeePerGas: 683093337n,
+  maxFeePerBlobGas: null,
+  data: '0xeacabe1400000000000000000000000090f79bf6eb2c4f870365e785982e1f101e93b90600000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000010687474703a2f2f57454645534653465300000000000000000000000000000000',
+  value: 0n,
+  chainId: 31337n,
+  signature: Signature { r: "0x0da2274512734287b52ec550a960c9d0b6a18c55da6a4b1e39f5060b9945b28e", s: "0x72051348fe71b554d19dc18ed6bc97cbf88ab41b2e5027eefb1050e948d2344b", yParity: 1, networkV: null },
+  accessList: [],
+  blobVersionedHashes: null
+}
+> await cd.mintNFT(signers[3], "WEFESFSFS")
+ContractTransactionResponse {
+  provider: HardhatEthersProvider {
+    _hardhatProvider: LazyInitializationProviderAdapter {
+      _providerFactory: [AsyncFunction (anonymous)],
+      _emitter: [EventEmitter],
+      _initializingPromise: [Promise],
+      provider: [BackwardsCompatibilityProviderAdapter]
+    },
+    _networkName: 'localhost',
+    _blockListeners: [],
+    _transactionHashListeners: Map(0) {},
+    _eventListeners: []
+  },
+  blockNumber: 6,
+  blockHash: '0x6bf25f069a7c11ead07dc006db8c3655263b65d12ac3728408552b57dff488e6',
+  index: undefined,
+  hash: '0x24f975a2ea4ec47cb9d8a34783600cd41f277ae0ddd6e29405ed5b10affc0ea7',
+  type: 2,
+  to: '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512',
+  from: '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266',
+  nonce: 5,
+  gasLimit: 30000000n,
+  gasPrice: 598269374n,
+  maxPriorityFeePerGas: 143365268n,
+  maxFeePerGas: 598269374n,
+  maxFeePerBlobGas: null,
+  data: '0xeacabe1400000000000000000000000090f79bf6eb2c4f870365e785982e1f101e93b906000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000095745464553465346530000000000000000000000000000000000000000000000',
+  value: 0n,
+  chainId: 31337n,
+  signature: Signature { r: "0x1c5e87d10388385c15cad518966c3432729f36dd6a1653bbcc4bad2a1b579fac", s: "0x0d174c0303c1f4f9a6c99dd1ecb0a5999a17afeedcb4fc7609094ea24bff5df4", yParity: 1, networkV: null },
+  accessList: [],
+  blobVersionedHashes: null
+}
+> await cd.mintNFT(signers[3], "WEFESFSFS")
+ContractTransactionResponse {
+  provider: HardhatEthersProvider {
+    _hardhatProvider: LazyInitializationProviderAdapter {
+      _providerFactory: [AsyncFunction (anonymous)],
+      _emitter: [EventEmitter],
+      _initializingPromise: [Promise],
+      provider: [BackwardsCompatibilityProviderAdapter]
+    },
+    _networkName: 'localhost',
+    _blockListeners: [],
+    _transactionHashListeners: Map(0) {},
+    _eventListeners: []
+  },
+  blockNumber: 7,
+  blockHash: '0x1c7bacb042c2339825e26d5397e318b8d99233e30bfbfc9da0e690b13277f300',
+  index: undefined,
+  hash: '0xb446a968a5f9b9d39ddd14d29eef12a293024f3052878f8956bfde82a1e7e6b5',
+  type: 2,
+  to: '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512',
+  from: '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266',
+  nonce: 6,
+  gasLimit: 30000000n,
+  gasPrice: 523892860n,
+  maxPriorityFeePerGas: 125562708n,
+  maxFeePerGas: 523892860n,
+  maxFeePerBlobGas: null,
+  data: '0xeacabe1400000000000000000000000090f79bf6eb2c4f870365e785982e1f101e93b906000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000095745464553465346530000000000000000000000000000000000000000000000',
+  value: 0n,
+  chainId: 31337n,
+  signature: Signature { r: "0x8841286e55498f6aa195b0aa2457e853a299edcd0996bf8e6f169049d0c004b6", s: "0x60468c76a19e20f507abfbb3095e955836f7de317dee4f367a594a9cb68dcbb9", yParity: 0, networkV: null },
+  accessList: [],
+  blobVersionedHashes: null
+}
+> await cd.mintNFT(signers[3], "WEFESFSFS")
+ContractTransactionResponse {
+  provider: HardhatEthersProvider {
+    _hardhatProvider: LazyInitializationProviderAdapter {
+      _providerFactory: [AsyncFunction (anonymous)],
+      _emitter: [EventEmitter],
+      _initializingPromise: [Promise],
+      provider: [BackwardsCompatibilityProviderAdapter]
+    },
+    _networkName: 'localhost',
+    _blockListeners: [],
+    _transactionHashListeners: Map(0) {},
+    _eventListeners: []
+  },
+  blockNumber: 8,
+  blockHash: '0x7a00be9ec3420d4aac6e1eaa14158b36df6f5bd336fc17224f3a0f07db479332',
+  index: undefined,
+  hash: '0x01f1c9e6752b28c61f14973569c33ec87456e4ab8df703fe9952b39ac5dac616',
+  type: 2,
+  to: '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512',
+  from: '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266',
+  nonce: 7,
+  gasLimit: 30000000n,
+  gasPrice: 458762793n,
+  maxPriorityFeePerGas: 109952822n,
+  maxFeePerGas: 458762793n,
+  maxFeePerBlobGas: null,
+  data: '0xeacabe1400000000000000000000000090f79bf6eb2c4f870365e785982e1f101e93b906000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000095745464553465346530000000000000000000000000000000000000000000000',
+  value: 0n,
+  chainId: 31337n,
+  signature: Signature { r: "0x9cc3d324c568c4125883a3e993e198ba2c63cfef7a4456b9188bffab0937bedf", s: "0x4f7109487bddb8b9b05d9d47d29131f52c1ac9e5ef0d845fcee8582f24f58bc4", yParity: 0, networkV: null },
+  accessList: [],
+  blobVersionedHashes: null
+}
+> await cd.mintNFT(signers[3], "WEFESFSFS")
+ContractTransactionResponse {
+  provider: HardhatEthersProvider {
+    _hardhatProvider: LazyInitializationProviderAdapter {
+      _providerFactory: [AsyncFunction (anonymous)],
+      _emitter: [EventEmitter],
+      _initializingPromise: [Promise],
+      provider: [BackwardsCompatibilityProviderAdapter]
+    },
+    _networkName: 'localhost',
+    _blockListeners: [],
+    _transactionHashListeners: Map(0) {},
+    _eventListeners: []
+  },
+  blockNumber: 9,
+  blockHash: '0xe8c7881f0b1af3d521c4494daf3090209d52192e45e471d4cea358f6e8783ba4',
+  index: undefined,
+  hash: '0x416be5c61f1403ce23b779aa8a6469727e7781223c2c1f25561f6c5850751fd8',
+  type: 2,
+  to: '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512',
+  from: '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266',
+  nonce: 8,
+  gasLimit: 30000000n,
+  gasPrice: 401729659n,
+  maxPriorityFeePerGas: 96283549n,
+  maxFeePerGas: 401729659n,
+  maxFeePerBlobGas: null,
+  data: '0xeacabe1400000000000000000000000090f79bf6eb2c4f870365e785982e1f101e93b906000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000095745464553465346530000000000000000000000000000000000000000000000',
+  value: 0n,
+  chainId: 31337n,
+  signature: Signature { r: "0x4c4a7860b5c4926a953798c4b9ed616bbe4de9c9d866d0f63855150e8112f26e", s: "0x44878abf94971bf0ddfe8207bb16e10e8d77a1a6e40ac10f4f4db005b4405953", yParity: 1, networkV: null },
+  accessList: [],
+  blobVersionedHashes: null
+}
+> await cd.mintNFT(signers[3], "WEFESFSFS")
+ContractTransactionResponse {
+  provider: HardhatEthersProvider {
+    _hardhatProvider: LazyInitializationProviderAdapter {
+      _providerFactory: [AsyncFunction (anonymous)],
+      _emitter: [EventEmitter],
+      _initializingPromise: [Promise],
+      provider: [BackwardsCompatibilityProviderAdapter]
+    },
+    _networkName: 'localhost',
+    _blockListeners: [],
+    _transactionHashListeners: Map(0) {},
+    _eventListeners: []
+  },
+  blockNumber: 10,
+  blockHash: '0x4901c6834921d07caaf2d1becd7279bdbc5a2e6f2a21ec5269d5d5cbc9a24e6a',
+  index: undefined,
+  hash: '0x64283979338be7d26b11588ff6de0329c74b38475f6b68c3f78287c785aa228f',
+  type: 2,
+  to: '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512',
+  from: '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266',
+  nonce: 9,
+  gasLimit: 30000000n,
+  gasPrice: 351786852n,
+  maxPriorityFeePerGas: 84313632n,
+  maxFeePerGas: 351786852n,
+  maxFeePerBlobGas: null,
+  data: '0xeacabe1400000000000000000000000090f79bf6eb2c4f870365e785982e1f101e93b906000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000095745464553465346530000000000000000000000000000000000000000000000',
+  value: 0n,
+  chainId: 31337n,
+  signature: Signature { r: "0x9c6e2b7f1992af5116e1477d27e41fff0235d24abec7ab0e6d6a18e13730a99d", s: "0x39aa0a9f7d1535d0a8296fa2e6c864a71fda3a18cc9758bf0ac36a77eda51ca0", yParity: 0, networkV: null },
+  accessList: [],
+  blobVersionedHashes: null
+}
+> await cd.mintNFT(signers[3], "WEFESFSFS")
+ContractTransactionResponse {
+  provider: HardhatEthersProvider {
+    _hardhatProvider: LazyInitializationProviderAdapter {
+      _providerFactory: [AsyncFunction (anonymous)],
+      _emitter: [EventEmitter],
+      _initializingPromise: [Promise],
+      provider: [BackwardsCompatibilityProviderAdapter]
+    },
+    _networkName: 'localhost',
+    _blockListeners: [],
+    _transactionHashListeners: Map(0) {},
+    _eventListeners: []
+  },
+  blockNumber: 11,
+  blockHash: '0xf3553add4a79dbc1104c0b71025d026c35546eede9b90315644042dd0c2dd713',
+  index: undefined,
+  hash: '0x8116a8032879aad5c65d2c2a26feebd03f03139788e06972ea51e784c237b92e',
+  type: 2,
+  to: '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512',
+  from: '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266',
+  nonce: 10,
+  gasLimit: 30000000n,
+  gasPrice: 308052908n,
+  maxPriorityFeePerGas: 73831808n,
+  maxFeePerGas: 308052908n,
+  maxFeePerBlobGas: null,
+  data: '0xeacabe1400000000000000000000000090f79bf6eb2c4f870365e785982e1f101e93b906000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000095745464553465346530000000000000000000000000000000000000000000000',
+  value: 0n,
+  chainId: 31337n,
+  signature: Signature { r: "0xb963c887654fd9668de5436a40a673b21c4f52fb4fb8a71d141aaba5dca34e47", s: "0x30437fb34b1d26cbf732205c80904ae8ee42d575217c4a7fac38d92181a9f666", yParity: 0, networkV: null },
+  accessList: [],
+  blobVersionedHashes: null
+}
+> await cd.mintNFT(signers[3], "WEFESFSFS")
+ContractTransactionResponse {
+  provider: HardhatEthersProvider {
+    _hardhatProvider: LazyInitializationProviderAdapter {
+      _providerFactory: [AsyncFunction (anonymous)],
+      _emitter: [EventEmitter],
+      _initializingPromise: [Promise],
+      provider: [BackwardsCompatibilityProviderAdapter]
+    },
+    _networkName: 'localhost',
+    _blockListeners: [],
+    _transactionHashListeners: Map(0) {},
+    _eventListeners: []
+  },
+  blockNumber: 12,
+  blockHash: '0x700fd5cde875120fe8ee35e73136a0304ef59daed74ddbc6fff8d687f74525ea',
+  index: undefined,
+  hash: '0x0da3df487dfe323b81534f51bd76450d7864d47aeeffb5b0b3afba7127bc0d91',
+  type: 2,
+  to: '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512',
+  from: '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266',
+  nonce: 11,
+  gasLimit: 30000000n,
+  gasPrice: 269755944n,
+  maxPriorityFeePerGas: 64653079n,
+  maxFeePerGas: 269755944n,
+  maxFeePerBlobGas: null,
+  data: '0xeacabe1400000000000000000000000090f79bf6eb2c4f870365e785982e1f101e93b906000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000095745464553465346530000000000000000000000000000000000000000000000',
+  value: 0n,
+  chainId: 31337n,
+  signature: Signature { r: "0xda0067c01ef63d3e478e9a5f41ad4b3fac27808df597a9bd81f58cb0b731ec16", s: "0x1b4d93818d3d6f1a43c96b1e88566897cdc6ac768a75dadaa85088015b407e36", yParity: 1, networkV: null },
+  accessList: [],
+  blobVersionedHashes: null
+}
+> await cd.mintNFT(signers[3], "WEFESFSFS")
+>
+
+
